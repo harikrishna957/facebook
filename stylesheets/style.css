@@ -1,0 +1,214 @@
+/* line 5, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../sass/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/style.scss */
+html, body {
+  line-height: 1.4;
+  font-size: 14px;
+}
+/* line 9, ../sass/style.scss */
+html, html textarea, body, body textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 15, ../sass/style.scss */
+.total {
+  background-color: #3b5899;
+}
+
+/* line 18, ../sass/style.scss */
+.navbar {
+  width: 900px;
+  margin: auto;
+  padding: 10px;
+  background-color: #3b5899;
+  color: white;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 26, ../sass/style.scss */
+.navbar .logo {
+  margin-right: 10px;
+}
+
+/* line 30, ../sass/style.scss */
+.MainContent {
+  width: 900px;
+  margin: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 35, ../sass/style.scss */
+.MainContent .left {
+  margin: 10px 10px 0px 0px;
+  -webkit-flex-basis: 250px;
+  flex-basis: 250px;
+  height: 500px;
+  background-color: white;
+}
+/* line 41, ../sass/style.scss */
+.MainContent .middle {
+  margin: 10px 5px;
+  background-color: white;
+  height: 500px;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+/* line 46, ../sass/style.scss */
+.MainContent .middle .post {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+/* line 48, ../sass/style.scss */
+.MainContent .middle .post textarea {
+  padding: 10px;
+  border-width: 0px;
+  outline-width: 0px;
+  resize: none;
+  width: 100%;
+  height: 75px;
+}
+/* line 55, ../sass/style.scss */
+.MainContent .middle .post textarea:hover {
+  border-width: 0px;
+  outline-width: 0px;
+}
+/* line 59, ../sass/style.scss */
+.MainContent .middle .post textarea, .MainContent .middle .post textarea:hover {
+  border-bottom: 1px solid black;
+}
+/* line 63, ../sass/style.scss */
+.MainContent .middle .post div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+/* line 66, ../sass/style.scss */
+.MainContent .middle .post div span {
+  margin-right: 10px;
+}
+/* line 72, ../sass/style.scss */
+.MainContent .middle .wall {
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.4);
+}
+/* line 76, ../sass/style.scss */
+.MainContent .middle .wall .header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 79, ../sass/style.scss */
+.MainContent .middle .wall .header .time {
+  font-size: 12px;
+  opacity: 0.6;
+}
+/* line 83, ../sass/style.scss */
+.MainContent .middle .wall .header .remove {
+  cursor: pointer;
+  padding: 5px;
+}
+/* line 86, ../sass/style.scss */
+.MainContent .middle .wall .header .remove:hover {
+  background-color: green;
+  color: white;
+  opacity: 0.6;
+}
+/* line 93, ../sass/style.scss */
+.MainContent .middle .wall .content {
+  height: 100px;
+}
+/* line 96, ../sass/style.scss */
+.MainContent .middle .wall .footer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: start;
+  justify-content: start;
+}
+/* line 99, ../sass/style.scss */
+.MainContent .middle .wall .footer .like, .MainContent .middle .wall .footer .comment {
+  margin: 10px;
+  margin-left: 0px;
+}
+/* line 106, ../sass/style.scss */
+.MainContent .right {
+  -webkit-flex-basis: 250px;
+  flex-basis: 250px;
+  margin: 10px 0px 0px 10px;
+  background-color: white;
+  height: 500px;
+}
