@@ -3,7 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "@types/react": "^15.0.38",
+    "@types/react-dom": "^15.5.1",
+    "@types/react-redux": "^4.4.46",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "ts-loader": "^2.3.0",
+    "typescript": "^2.4.1",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

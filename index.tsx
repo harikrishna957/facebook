@@ -7,7 +7,7 @@ import {Provider} from "react-redux";
 import {action} from './ts/Actions/WallAction';
 import {RootReducer} from "./ts/Reducers/RootReducer";
 
-let store = createStore(RootReducer);
+let store = createStore(RootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 let Facebook = (props)=> {
 	return <div>

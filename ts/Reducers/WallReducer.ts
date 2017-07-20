@@ -1,22 +1,30 @@
+interface ICommentState{
+	posted: string,
+	comment_text: string,
+	comment_id: number,
+	time: string
+}
 export interface IWallState{
 	id:number,
 	username:string,
 	time:string,
 	content:string,
-	likes:string[]
+	likes:string[],
+	comments:ICommentState[]
 }
-let gid=0;
+let gid=3;
 let initialstate:IWallState[] = [];
 
 export let WallReducer=(state:IWallState[]=initialstate,action)=>{
 	switch(action.type){
 		case "WALL_ADD":
-			let newWall:IWallState = {
+			let newWall= {
 				id:gid++,
-				username:action.name,
+				username:action.username,
 				time:new Date().toString(),
 				content:action.content,
-				likes:[]
+				likes:[],
+				comments: []
 			};
 			state = [
 				...state,
@@ -30,6 +38,7 @@ export let WallReducer=(state:IWallState[]=initialstate,action)=>{
 				}
 				return wall;
 			})
+			break;
 		case "WALL_DELETE":
 			state = state.filter((wall)=>{
 				if(wall.id==action.id){
@@ -37,6 +46,7 @@ export let WallReducer=(state:IWallState[]=initialstate,action)=>{
 				}
 				return true;
 			})
+			break;
 		case "WALL_LIKE":
 			state=state.map((wall)=>{
 				if(wall.id==action.id){
@@ -46,6 +56,45 @@ export let WallReducer=(state:IWallState[]=initialstate,action)=>{
 				}
 				return wall
 			})
+			break;
+		case "COMMENT_ADD":
+			let newComment : ICommentState= {
+				comment_id:gid++,
+				posted:action.name,
+				time:new Date().toString(),
+				comment_text: action.text
+			};
+			state = state.map((wall)=>{
+				if (wall.id==action.id){
+					wall.comments = [...wall.comments, newComment]
+				}
+				return wall
+			})
+			break;
+		case "COMMENT_EDIT":
+			state = state.map((wall)=>{
+				if (wall.id==action.id){
+					wall.comments = wall.comments.filter((comment)=>{
+						if (action.comment_id==comment.comment_id)
+							return false
+						return true
+					})
+				}
+				return wall
+			})
+			break;
+		case "COMMENT_DELETE":
+			state = state.map((wall)=>{
+				if (wall.id==action.id){
+					wall.comments = wall.comments.filter((comment)=>{
+						if (action.comment_id==comment.comment_id)
+							return false
+						return true
+					})
+				}
+				return wall
+			})
+			break;
 	}
 	return state;
 };

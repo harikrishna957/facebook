@@ -5,7 +5,7 @@ export let NavBar = (props)=> {
 		<div className="navbar">
 			<div>
 				<span className="logo">{props.logo}</span>
-				<input type="text" onChange={(e)=>{window.userName=e.target.value;}}/>
+				<input type="text" onChange={(e)=>{Window.UserName=e.target.value}}/>
 			</div>
 			<div>M N S</div>
 		</div>

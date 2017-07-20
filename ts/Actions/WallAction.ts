@@ -25,5 +25,20 @@ export let action={
 			id,
 			username
 		}
+	},
+	add_comment(name, text, id){
+		return{
+			type: "COMMENT_ADD",
+			name,
+			text,
+			id,
+		}
+	},
+	delete_comment(id, comment_id){
+		return{
+			type: "COMMENT_DELETE",
+			id,
+			comment_id
+		}
 	}	
 }

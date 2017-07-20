@@ -2,7 +2,8 @@ import * as React from 'react';
 import {Post} from './Post';
 import {connect} from "react-redux";
 import {IRootState} from '../ts/Reducers/RootReducer';
-import {action} from '../ts/Actions/WallAction'
+import {action} from '../ts/Actions/WallAction';
+import {Comments} from './Comments';
 class Walls extends React.Component<any, any> {
 	render() {
 		// react_props_wall
@@ -48,7 +49,7 @@ let Wall = (props)=> {
 		</div>
 		<div className="footer">
 			<button className="like">{props.likes.length}</button>
-			<button className="comment">Comment</button>
+			<Comments {...props}/>
 		</div>
 	</div>;
 };

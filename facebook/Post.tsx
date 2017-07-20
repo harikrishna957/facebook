@@ -11,7 +11,7 @@ class _Post extends React.Component<any, any> {
 	}
 
 	post(){
-		this.props.addPost("Kishore", this.input.value);
+		this.props.addPost(Window.UserName, this.input.value);
 		this.input.value = "";
 	}
 	render() {

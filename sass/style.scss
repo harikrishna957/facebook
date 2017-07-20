@@ -93,14 +93,14 @@ html, body {
 			.content{
 				height: 100px;
 			}
-			.footer{
+			/*.footer{
 				@include display-flex();
 				@include justify-content(start);
 				.like, .comment {
 					margin: 10px;
 					margin-left: 0px;
 				}
-			}
+			}*/
 		}
 	}
 	.right{
